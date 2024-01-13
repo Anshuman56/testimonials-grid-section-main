@@ -1,0 +1,178 @@
+/* Font */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+/* Reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+/* Reset */
+
+:root {
+  --c-moderate-violet: hsl(263, 55%, 52%);
+  --c-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --c-very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --c-white: hsl(0, 0%, 100%);
+
+  --c-light-gray: hsl(0, 0%, 81%);
+  --c-light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+/* Main site style */
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--c-light-grayish-blue);
+}
+
+.content {
+  margin: 3rem 1rem;
+}
+
+section {
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.card_image {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+img {
+  border-radius: 50%;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  color: var(--c-white);
+}
+
+h3 {
+  color: var(--c-white);
+}
+
+p,
+h4 {
+  color: var(--c-light-gray);
+}
+
+.card1 {
+  background-color: var(--c-moderate-violet);
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-position: 90% 0%;
+  background-repeat: no-repeat;
+}
+
+.card2 {
+  background-color: var(--c-very-dark-grayish-blue);
+}
+
+.card3,
+.card5 {
+  background-color: var(--c-white);
+}
+
+.card3 h2,
+.card3 h3,
+.card5 h2,
+.card5 h3 {
+  color: var(--c-very-dark-grayish-blue);
+}
+.card3 p,
+.card5 p,
+.card3 h4,
+.card5 h4 {
+  color: var(--c-very-dark-grayish-blue);
+}
+.card4 {
+  background-color: var(--c-very-dark-blackish-blue);
+}
+@media screen and (min-width: 70em) {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(10rem, auto);
+  }
+  .card1 {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+  .card2 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .card3 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .card4 {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
+  .card5 {
+    grid-column: 4;
+    grid-row: 1 / 3;
+  }
+}
