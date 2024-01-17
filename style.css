@@ -81,10 +81,14 @@ h6 {
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
   background-color: var(--c-light-grayish-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
   margin: 3rem 1rem;
+  max-width: 80rem;
 }
 
 section {
